@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Scripts.Infrastructure
+namespace Infrastructure
 {
     public class GameBootstrapper : MonoBehaviour
     {

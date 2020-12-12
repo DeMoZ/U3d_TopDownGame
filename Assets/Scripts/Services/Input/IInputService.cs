@@ -4,7 +4,7 @@ namespace Services.Input
 {
     public interface IInputService
     {
-        Vector2 Axis();
+        Vector2 Axis { get; }
         bool FireButtonUp();
     }
 
@@ -13,10 +13,10 @@ namespace Services.Input
         protected const string Horizontal = "Horizontal";
         protected const string Vertical = "Vertical";
         private const string FireButton = "Fire";
-        
-        public abstract Vector2 Axis();
 
-        public bool FireButtonUp() => 
+        public abstract Vector2 Axis { get; }
+
+        public bool FireButtonUp() =>
             SimpleInput.GetButtonUp(FireButton);
 
         protected static Vector2 GetAxisSimpleInput() =>

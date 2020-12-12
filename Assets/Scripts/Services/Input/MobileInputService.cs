@@ -4,7 +4,7 @@ namespace Services.Input
 {
     public class MobileInputService : InputService
     {
-        public override Vector2 Axis() =>
+        public override Vector2 Axis =>
             GetAxisSimpleInput();
     }
 }
