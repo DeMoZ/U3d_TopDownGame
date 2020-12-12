@@ -4,14 +4,17 @@ namespace Services.Input
 {
     public class StandaloneInputService : InputService
     {
-        public override Vector2 Axis()
+        public override Vector2 Axis
         {
-            Vector2 axis = GetAxisSimpleInput();
+            get
+            {
+                Vector2 axis = GetAxisSimpleInput();
 
-            if (axis == Vector2.zero)
-                axis = UnityAxis();
+                if (axis == Vector2.zero)
+                    axis = UnityAxis();
 
-            return axis;
+                return axis;
+            }
         }
 
         private static Vector2 UnityAxis() =>

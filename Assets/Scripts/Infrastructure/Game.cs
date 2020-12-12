@@ -1,11 +1,11 @@
 ﻿using Services.Input;
 using UnityEngine;
 
-namespace Scripts.Infrastructure
+namespace Infrastructure
 {
     public class Game
     {
-        public IInputService InputService;
+        public static IInputService InputService;
 
         public Game()
         {
