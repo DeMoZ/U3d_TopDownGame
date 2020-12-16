@@ -42,10 +42,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 630839945711674175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ff284fd5c9dca42b2d69232f6ca5bb, type: 3}
+  m_Script: {fileID: 11500000, guid: ae7b333c6a24cb447a9579612ce82be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterController: {fileID: 3436522770753483817}
+  CharacterController: {fileID: 0}
   MovementSpeed: 4
 --- !u!143 &3436522770753483817
 CharacterController:
