@@ -37,7 +37,7 @@ namespace CodeBase.Infrastructure
         private IInputService RegisterInputService()
         {
             if (Application.isEditor)
-                return new StandaloneInpurtSevice();
+                return new StandaloneInputService();
             else
                 return new MobileInputService();
         }

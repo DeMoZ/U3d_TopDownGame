@@ -1,5 +1,4 @@
 ﻿using CodeBase.Services.Input;
-using UnityEngine.SceneManagement;
 
 namespace CodeBase.Infrastructure
 {

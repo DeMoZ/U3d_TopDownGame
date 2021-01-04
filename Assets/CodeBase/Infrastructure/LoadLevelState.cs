@@ -5,7 +5,7 @@ namespace CodeBase.Infrastructure
 {
     public class LoadLevelState : IPayloadedState<string>
     {
-        private const string HeroPath = "Hero/Hero";
+        private const string HeroPath = "Hero/HeroBot";
         private const string HudPath = "Hud/Hud";
         private const string InitialPoint = "InitialPoint";
 
