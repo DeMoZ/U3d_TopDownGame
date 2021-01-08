@@ -30,11 +30,11 @@ namespace CodeBase.Hero
 
         private void Move()
         {
-            var movementVector =  ReadInput(Camera.main.transform);
+            var moveVector =  ReadInput(Camera.main.transform);
 
-            RotateTowardsMovement(movementVector);
+            RotateTowardsMovement(moveVector);
 
-            movementVector *= _movementSpeed;
+            moveVector *= _movementSpeed;
 
             if (_characterController.isGrounded)
                 _jumpSpeedCurrent = 0;
@@ -44,12 +44,12 @@ namespace CodeBase.Hero
 
             _jumpSpeedCurrent += Physics.gravity.y * Time.deltaTime;
 
-            movementVector += _jumpSpeedCurrent * Vector3.up;
+            moveVector += _jumpSpeedCurrent * Vector3.up;
 
-            movementVector *= Time.deltaTime;
-            movementVector += new Vector3(Physics.gravity.x, 0, Physics.gravity.z) * Time.deltaTime;
+            moveVector *= Time.deltaTime;
+            moveVector += new Vector3(Physics.gravity.x, 0, Physics.gravity.z) * Time.deltaTime;
 
-            _characterController.Move(movementVector);
+            _characterController.Move(moveVector);
         }
 
         private void RotateTowardsMovement(Vector3 movementVector)

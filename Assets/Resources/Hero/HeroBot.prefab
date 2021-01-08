@@ -76,7 +76,8 @@ GameObject:
   - component: {fileID: 6696700045719640047}
   - component: {fileID: -8122757637486856982}
   - component: {fileID: 6998700491627599966}
-  - component: {fileID: 1243934492648355439}
+  - component: {fileID: -9153574821516645472}
+  - component: {fileID: -8206645949030194892}
   m_Layer: 0
   m_Name: HeroBot
   m_TagString: Untagged
@@ -165,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsMovingMark: 0
---- !u!114 &1243934492648355439
+--- !u!114 &-9153574821516645472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,13 +175,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 243959672534938299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae7b333c6a24cb447a9579612ce82be3, type: 3}
+  m_Script: {fileID: 11500000, guid: ddbef594f15c4fc0a86dde378d216467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 4
-  _rotationSpeed: 7
+  _rotationSpeed: 6
+--- !u!114 &-8206645949030194892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243959672534938299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75da8de0d74e40289a68d3fa26e4ee1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _jumpSpeed: 5
-  _jumpCooldown: 0.2
+  _jumpCooldown: 0.5
+  _isGrounded1: 0
+  _isGrounded2: 0
 --- !u!1 &728717229892413386
 GameObject:
   m_ObjectHideFlags: 0
