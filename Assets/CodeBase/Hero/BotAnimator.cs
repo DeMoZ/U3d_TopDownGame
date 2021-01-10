@@ -40,7 +40,7 @@ namespace JobsMoveToClickPoint
             ApplyMovement(velocity);
         }
 
-        public void ApplyJump(Vector3 velocity)
+        public void ApplyJump()
         {
 //            Debug.Log("ApplyJump");
 //            if (velocity.magnitude > 0.1f && velocity.magnitude < 0.5f)

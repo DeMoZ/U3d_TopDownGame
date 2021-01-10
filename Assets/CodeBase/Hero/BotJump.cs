@@ -35,15 +35,20 @@ namespace CodeBase.Hero
         private void OnDestroy() =>
             _move.UnSubscribeOnMovement(UpdateJump);
 
-      private void UpdateJump(Vector3 moveVector, float deltaTime)
+        private void UpdateJump(Vector3 moveVector)
         {
             if (_characterController.isGrounded)
                 _jumpSpeedCurrent = 0;
 
             var sendJump = false;
-
+            
             if (CanJump() && _inputService.IsJumpButtonDown())
             {
+                if (CanHang())
+                {
+                    Debug.Log("CanHang");
+                }
+                
                 _jumpSpeedCurrent = _jumpSpeed;
                 sendJump = true;
             }
@@ -55,7 +60,7 @@ namespace CodeBase.Hero
             _characterController.Move(moveVector);
 
             if (sendJump)
-                _animator.ApplyJump(moveVector);
+                _animator.ApplyJump();
         }
 
         private bool CanJump()
@@ -68,6 +73,17 @@ namespace CodeBase.Hero
             _isGrounded = _characterController.isGrounded;
 
             return _characterController.isGrounded && _jumpCooldownTimer <= 0;
+        }
+
+        private bool CanHang()
+        {
+            if (true)
+            {
+                
+                return true;
+            }
+
+            return false;
         }
     }
 }

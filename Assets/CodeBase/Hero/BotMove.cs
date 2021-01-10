@@ -11,7 +11,7 @@ namespace CodeBase.Hero
         [SerializeField] private float _movementSpeed;
         [SerializeField] private float _rotationSpeed;
 
-        private event Action<Vector3, float> OnMoveVectorCalculated;
+        private event Action<Vector3> OnMoveVectorCalculated;
 
         private CharacterController _characterController;
         private IInputService _inputService;
@@ -40,7 +40,7 @@ namespace CodeBase.Hero
             if (OnMoveVectorCalculated == null)
                 _characterController.Move(moveVector);
             else
-                OnMoveVectorCalculated.Invoke(moveVector, Time.deltaTime);
+                OnMoveVectorCalculated.Invoke(moveVector);
         }
 
         private void RotateTowardsMovement(Vector3 movementVector)
@@ -63,10 +63,10 @@ namespace CodeBase.Hero
             return movementVector;
         }
 
-        public void SubscribeOnMovement(Action<Vector3, float> callback) =>
+        public void SubscribeOnMovement(Action<Vector3> callback) =>
             OnMoveVectorCalculated += callback;
 
-        public void UnSubscribeOnMovement(Action<Vector3, float> callback) =>
+        public void UnSubscribeOnMovement(Action<Vector3> callback) =>
             OnMoveVectorCalculated -= callback;
     }
 }

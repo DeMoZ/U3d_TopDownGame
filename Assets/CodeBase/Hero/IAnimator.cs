@@ -4,6 +4,6 @@ namespace JobsMoveToClickPoint
 {
     public interface IAnimator 
     {
-        void ApplyJump(Vector3 velocity);
+        void ApplyJump();
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CodeBase.Hero
 {
@@ -20,9 +19,9 @@ namespace CodeBase.Hero
         private void OnDestroy() =>
             _move.UnSubscribeOnMovement(UpdateJump);
 
-        private void UpdateJump(Vector3 moveVector, float deltaTime)
+        private void UpdateJump(Vector3 moveVector)
         {
-            moveVector.y += Physics.gravity.y * deltaTime;
+            moveVector.y += Physics.gravity.y * Time.deltaTime;
             _characterController.Move(moveVector);
 
             if (_characterController.isGrounded)
